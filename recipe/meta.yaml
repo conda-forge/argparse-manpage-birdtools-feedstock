@@ -1,5 +1,5 @@
 {% set name = "argparse-manpage-birdtools" %}
-{% set version = "1.6" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d100f5786c85bc907db49a4e7fb59750b6433536e3b1924cae789aac0254a775
+  sha256: 20eae3079a4a2dbe1a7557ef7276a4d8e5a44c7c4223afb50f4f1d0ae0e7d103
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,7 +30,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Format ROFF documents (manual page format) from python ArgumentParser objects. Maintained specifically for the bird tools bioinformatics suite.'
+  summary: Format ROFF documents (manual page format) from python ArgumentParser objects. Maintained specifically for the bird tools bioinformatics suite.
 
 extra:
   recipe-maintainers:
